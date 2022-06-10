@@ -10,7 +10,7 @@ export default async function handler(request, response) {
 		return response.status(200).json({data: users});
 	}
 
-	if (request === 'DELETE') {
+	if (request.method === 'DELETE') {
 		const deletedUser = await User.findByIdAndRemove(userId);
 		return response.status(200).json({data: deletedUser});
 	}

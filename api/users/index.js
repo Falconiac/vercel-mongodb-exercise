@@ -12,18 +12,6 @@ export default async function handler(request, response) {
 		return response.status(200).json({data: users});
 	}
 	if (request.method === 'POST') {
-		// DELETE example:
-		// const deletedUser = await User.findByIdAndRemove('62a1ec7576a40ec426504bd0');
-		// return response.status(200).json({data: deletedUser});
-
-		// UPDATE example:
-		// const updatedUser = await User.findByIdAndUpdate(
-		// 	'62a1ec233a4d567120be0f79',
-		// 	{$set: {name: 'Mario'}},
-		// 	{new: true}
-		// );
-		// return response.status(200).json({data: updatedUser});
-
 		const newUser = new User({
 			name: 'Paula',
 			email: 'paula@google.com',
