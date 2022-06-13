@@ -1,3 +1,5 @@
+import {useState} from 'react';
+import {useEffect} from 'react';
 import {Routes, Route, Link} from 'react-router-dom';
 
 import Exercise1 from './components/Exercise1';
@@ -10,10 +12,35 @@ import Home from './components/pages/home/Home';
 import './App.css';
 
 export default function App() {
+	const [{data, error}, setData] = useState({data: [], error: null});
+
+	useEffect(() => {
+		fetch('/api/users')
+			.then(response => {
+				if (!response.ok) {
+					throw Error(response.statusText);
+				} else {
+					return response.json();
+				}
+			})
+			.then(data => {
+				setData({
+					data: data.data,
+					error: null,
+				});
+			})
+			.catch(error => {
+				setData({
+					data: [],
+					error: error.message,
+				});
+			});
+	}, []);
+
 	return (
 		<>
 			<Routes>
-				<Route path="/" element={<Home />} />
+				<Route path="/" element={<Home data={data} />} />
 				<Route path="Create" element={<Create />} />
 			</Routes>
 			<Footer />;

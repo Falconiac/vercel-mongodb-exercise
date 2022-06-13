@@ -4,10 +4,14 @@
 	display: flex;
 	justify-content: center;
 	background-color: darkgray;
+	position: fixed;
+	top: 0;
 }
 
 h2 {
 	font-size: 5vh;
 	padding-top: 0.5vh;
 	color: rgb(25, 31, 36);
+	position: fixed;
+	top: 0;
 }
