@@ -8,6 +8,7 @@ import Exercise3 from './components/Exercise3';
 import Exercise4 from './components/Exercise4';
 import Footer from './components/footer/Footer';
 import Create from './components/pages/create/Create.js';
+import Details from './components/pages/details/Details';
 import Home from './components/pages/home/Home';
 import './App.css';
 
@@ -42,6 +43,7 @@ export default function App() {
 			<Routes>
 				<Route path="/" element={<Home data={data} />} />
 				<Route path="Create" element={<Create />} />
+				<Route path="Details" element={<Details data={data} />} />
 			</Routes>
 			<Footer />;
 		</>

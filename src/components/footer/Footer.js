@@ -5,8 +5,12 @@ import './Footer.css';
 function Footer() {
 	return (
 		<section className="navBar">
-			<NavLink to="/">Home</NavLink>
-			<NavLink to="/Create">Create</NavLink>
+			<NavLink className="button" to="/">
+				Home
+			</NavLink>
+			<NavLink className="button" to="/Create">
+				Create
+			</NavLink>
 		</section>
 	);
 }

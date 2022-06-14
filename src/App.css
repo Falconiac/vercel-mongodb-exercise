@@ -26,17 +26,16 @@
 .itemlist li:hover {
 	box-shadow: 0em 0em 1em rgba(137, 213, 96, 0.863);
 }
-
-li button {
+.button {
 	background-color: rgba(137, 213, 96, 0.863);
 	padding: 0.5em;
 	border-radius: 0.5em;
 }
 
-li button:hover {
+.button:hover {
 	box-shadow: 0em 0em 1em rgba(137, 213, 96, 0.863);
 }
-li button:active {
+.button:active {
 	box-shadow: 0em 0em 1em rgba(213, 96, 96, 0.863);
 	background-color: rgba(213, 96, 96, 0.863);
 }

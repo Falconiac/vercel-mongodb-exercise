@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import './Home.css';
 
 const Home = ({data}) => {
@@ -12,13 +13,9 @@ const Home = ({data}) => {
 					return (
 						<li key={item._id}>
 							{item.name}{' '}
-							<button
-								onClick={() => {
-									console.log(item._id);
-								}}
-							>
+							<NavLink className="button" to="/Details" state={item}>
 								Details
-							</button>
+							</NavLink>
 						</li>
 					);
 				})}
